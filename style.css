@@ -1,0 +1,293 @@
+
+.test
+{
+    color:orange;
+    font-size: 30px;
+    font-weight: bold;
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+/*version mobile*/
+@media(max-width:768px)
+{
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .logoo
+    {
+        margin-top: 12px;
+        font-weight: bolder;
+    }
+    .sec1
+    {
+        position:sticky;
+        top:0px;
+        height: 50px;
+        z-index: 99;
+        background-color: rgb(51, 120, 224);
+    }
+    .sec11 h2
+    {
+        margin-top: 5px;
+    }
+    .sec12
+    {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .sec12 button
+    {
+        background:none;
+        border: none;
+    }
+    .bar,.barre,.home_test,.barr
+    {
+        display: none;
+    }
+    .headerr2
+    {
+        display: none;
+    }
+    .sec2
+    {
+        background-color: #f8f9fa;
+        padding: 0;
+        margin: 0;
+    }
+    .bar2
+    {
+        font-size: 20px;
+        cursor:pointer;
+    }
+    .testoo
+    {
+        margin-left: 0px;
+    }
+    #btn-menu
+    {
+        cursor: pointer;
+        background:#f8f9fa;
+        border: none;
+        margin-top: 3px;
+        font-size: 27px;
+    }
+    .home_test_mobile
+    {
+        background-image: url("ressources/COVID-19_Pneumonia_Lungs.9d204f46.fill-1200x630-c0.jpg");
+        height: 650px;
+        background-position: 70%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .testoo
+    {
+        height: 750px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .home_testo
+    {
+        text-align: center;
+    }
+    .testoo h1{
+        padding-top: 50%;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+        word-spacing: 2px;
+    }
+    .nav-item:hover
+    {
+        background-color: #64CFD6;
+    }
+    .nav-link
+    {
+        color: black;
+    }
+}
+/*version desktop*/
+@media(min-width:768px)
+{
+    .headerr
+    {
+        background-color: rgba(255,255,255,0.2);
+        position: sticky;
+        top:0;
+        z-index: 99;
+        color: #fff;
+    }
+    .sec2
+    {
+        display: none;
+    }
+    .head
+    {
+        padding-left: 3%;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .head p
+    {
+        margin-right: 10px;
+    }
+    .head2
+    {
+        background-color: orange;
+        width: 50%;
+        margin-left: 30%;
+        text-align: center;
+        margin-top: 7px;
+    }
+    .head2:hover
+    {
+        background-color: #64CFD6;
+        color: #64CFD6;
+    }
+    .head2 a
+    {
+        text-decoration: none;
+    }
+    .head2 a h4
+    {
+        padding: 12px;
+        color: #fff;
+    }
+    .head3 a
+    {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .sec1
+    {
+        display: none;
+    }
+    .bar
+    {
+        position: sticky;
+        top:20px;
+        z-index: 99;
+        height: 10%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+    }
+    .barre
+    {
+        position: sticky;
+        top:0;
+        z-index: 99;
+        height: 10%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        background-color: #f8f9fa;
+    }
+    .logo
+    {
+        color:#fff;
+        font-weight: bold;
+        padding-left: 2%;
+    }
+    .logo2
+    {
+        color:black;
+        font-weight: bold;
+        padding-left: 2%;
+        padding-top: 8px;
+    }
+    .bar1
+    {
+        margin-left: 20%;
+    }
+    .bar12
+    {
+        margin-left: 20%;
+    }
+    .bar2
+    {
+        display:none;
+    }
+    .bar1 li a
+    {
+        color: #fff;
+    }
+    .bar12 li a
+    {
+        color: black;
+    }
+    .bar1 li a:hover
+    {
+        color: #64CFD6;
+    }
+    .bar12 li a:hover
+    {
+        color: #64CFD6;
+    }
+    .bar1 li
+    {
+        margin-left: 6%;
+        font-weight: bold;
+    }
+    .bar12 li
+    {
+        margin-left: 6%;
+        font-weight: bold;
+    }
+    .sec3 
+    {
+        font-size: 20px;
+        margin-top: 40px;
+        background-color: #fff;
+        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 4px -1px 12px 1px rgba(0,0,0,0.24); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 4px -1px 12px 1px rgba(0,0,0,0.24);
+    }
+    .sec3 h4
+    {
+        margin-left: 30%;
+    }
+    .home_test_mobile
+    {
+        display: none;
+    }
+    .home_image 
+    {
+        background-image: url("ressources/COVID-19_Pneumonia_Lungs.9d204f46.fill-1200x630-c0.jpg");
+        height: 750px;
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .testo
+    {
+        height: 750px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .home_test
+    {
+        text-align: center;
+    }
+    .testo h1{
+        padding-top: 20%;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+        word-spacing: 2px;
+    }
+    .home_info
+    {
+        margin-top: 625px;
+    }
+}
