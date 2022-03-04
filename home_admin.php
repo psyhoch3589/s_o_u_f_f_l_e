@@ -172,8 +172,9 @@ $conn = null;
                 <div class="form-step">
 
                     <img id="output_second" class="placed_image"/>
-                    <a href="#" class="btn-prev width-50 ml-auto">Edit image</a>
-                    
+                    <div class="edit_image">
+                        <a href="#" class="btn-prev ">Edit image</a>
+                    </div>
                     <div class="input-group">
                         <label for="SLIDE_TITLE">Slide title</label>
                         <input  type="text" name="SLIDE_TITLE" id="SLIDE_TITLE" >
