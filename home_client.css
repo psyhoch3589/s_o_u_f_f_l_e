@@ -79,7 +79,7 @@
     }
     .home_test_mobile
     {
-        background-image: url("ressources/COVID-19_Pneumonia_Lungs.9d204f46.fill-1200x630-c0.jpg");
+        background-image: url("home_src_client/COVID-19_Pneumonia_Lungs.9d204f46.fill-1200x630-c0.jpg");
         height: 650px;
         background-position: 70%;
         background-size: cover;

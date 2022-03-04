@@ -8,13 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home_client.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="home_page.js"></script>
+    <script src="home_client.js"></script>
     <title>test</title>
 </head>
 <body>
@@ -68,7 +68,7 @@
       <nav class="navbar navbar-expand-md bg-light">
         <h2 class="logoo">Souffle<span class="test">.</span></h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border:1px solid gray">
-            <img src="ressources/menu.png" width="30px" height= "30px">
+            <img src="home_src_client/menu.png" width="30px" height= "30px">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -90,7 +90,7 @@
         <div class="home_info">
             <hr>
             <h1>TITLE1</h1>
-            <img src="ressources/test.jpg" height="600px" width="1000px">
+            <img src="home_src_client/test.jpg" height="600px" width="1000px">
         </div>
     </div>
     
