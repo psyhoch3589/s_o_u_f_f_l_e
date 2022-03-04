@@ -259,7 +259,7 @@ box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 4px -1px 12
     }
     .home_image 
     {
-        background-image: url("ressources/COVID-19_Pneumonia_Lungs.9d204f46.fill-1200x630-c0.jpg");
+        background-image: url("home_src_client/test.jpg");
         height: 750px;
         background-position: 50%;
         background-size: cover;
