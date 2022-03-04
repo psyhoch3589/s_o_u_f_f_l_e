@@ -84,7 +84,12 @@
     <div class="home_test container-fluid nopadding" >
         <div class="home_image container-fluid nopadding">
             <div class="testo">
-                <h1>Make the world<br>a better place</h1>
+                <div class="testooo">
+                    <h1 id="tt"><span class="donate">DONATORS</span> FOR A <br>GOOD CAUSES</h1><hr style="background-color:#F75E61;width:90%">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Maecenas eget leo suscipit.Maecenas eget leo suscipit</p>
+                    <button class="donate-btn">Donate now</button>
+                    <button class="raise-btn">Raise Refund</button>
+                </div>
             </div>
         </div>
         <div class="home_info">
