@@ -1,0 +1,35 @@
+@media(min-width:768px){
+    .options{
+        height: 200px;
+        margin-top: 10px;
+    }
+    .option_box
+    {
+        padding-top: 10px;
+        width: 30%;
+        background-color: greenyellow;
+        margin-left: 6%;
+        background-image: url("home_src_client/background1.jpg");
+        border-radius: 10px;
+    }
+    .option1
+    {
+        color: #fff;
+        text-align: center;
+    }
+    .option1 p
+    {
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20%;
+        margin-bottom: 15%;
+    }
+    .btn_option
+    {
+        height: 40px;
+        width: 100%;
+        border: none;
+        background-color: #fff;
+        color: black;
+    }
+}

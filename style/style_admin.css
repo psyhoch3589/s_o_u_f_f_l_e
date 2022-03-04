@@ -81,9 +81,11 @@ input {
 .progressbar {
   position: relative;
   display: flex;
+  width: 80%;
   justify-content: space-between;
   counter-reset: step;
-  margin: 2rem 0 4rem;
+  margin-left: 10%;
+  margin-top: 3%;
 }
 
 .progressbar::before,
@@ -134,22 +136,23 @@ input {
 
 /* Form */
 .form {
-  width: clamp(420px, 30%, 530px);
-  /* width: clamp(320px, 30%, 430px); */
+  width: 80%;
   margin: 4rem auto 5rem;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
   padding: 2rem;
 }
-
-.form-step {
-  display: none;
-  transform-origin: top; /*where the content appears from*/
-  animation: animate 0.5s; /*transition defined later*/
+.form-step:not(:last-child)
+{
+  border-right: 1px solid rgb(212, 210, 210);
 }
-
-.form-step-active {
-  display: block;
+.form-step:first-child
+{
+  padding-right: 4%;
+}
+.form-step:last-child
+{
+  padding-left: 4%;
 }
 
 .input-group {

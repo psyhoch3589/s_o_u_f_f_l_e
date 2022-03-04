@@ -86,107 +86,74 @@ $conn = null;
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style/style_admin.css" />
+  <link rel="stylesheet" href="test.css">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     
     
     
 </head>
 <body>
-    <div class="row">
-        <div class="col-sm-3 sidebar-contnain">
-            
-            <nav class="navbar  sidebar_cont">
-                <!-- Links -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link" href="#first_form">first_form</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#second_form">second_form</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Link 3</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- <iframe name="hiddenFrame" class="hide"></iframe> -->
+    <div class="options row">
+        <div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
+            <div class="option1 row">
+                <div class="col-12">
+                    <p>HOME</p>
+                </div>
+                <div class="col-12">
+                    <button class="btn_option">Select</button>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-9">
-            <form action="#" class="form" id="myForm" method="POST"  enctype="multipart/form-data"> 
-                <h1 class="text-center">Add Slide</h1>
-                <!-- Progress bar -->
-                <div class="progressbar"> <!-- the container and also the static bar -->
-                    <div class="progress" id="progress"></div> <!-- Progress line that moves -->
-                    <div class="progress-step progress-step-active" data-title="Content" ></div>
-                    <div class="progress-step" data-title="Media"></div> <!--the circles -->
-                    <!-- <div class="progress-step" data-title="ID"></div> -->
-                    <div class="progress-step" data-title="Validation"></div>
+        <div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
+            <div class="option1 row">
+                <div class="col-12">
+                    <p>ABOUT</p>
                 </div>
-                <!-- Steps -->
-                <div class="form-step form-step-active">
-                    <div class="input-group">
-                        <label for="SLIDE_TITLE">Slide title</label>
-                        <input  type="text" name="user_title" id="user_title" >
-                    </div>
-                    <div class="input-group">
-                        <label for="DESCRIPTION">Description</label>
-                        <input  type="text" name="user_description" id="user_description" >
-                    </div>
-                    <div class="">
-                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
-                        
-                    </div>
+                <div class="col-12">
+                    <button class="btn_option">Select</button>
                 </div>
-                
-                <div class="form-step">
-                    <div class="input-group ">
-                        
-                    <img id="output" class="placed_image"/>
-                    <!-- <label for="slide_image">Picture</label> -->
-                    
-                    
-                    <input type="file" name="slide_image" id="slide_image" class="center_filling" accept="*/image" onchange="loadFile(event)">
-                    
-                    </div>
-                    <div class="btns-group">
-                    <a href="#" class="btn btn-prev">Previous</a>
-                    <!-- <a href="#" class="btn btn-next">Next</a> -->
-                    <button type="submit" onclick="return validat_form()" name="" class="btn btn-next " >Next</button>   
-                    </div>
+            </div>
+        </div><div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
+            <div class="option1 row">
+                <div class="col-12">
+                    <p>PROJECTS</p>
                 </div>
-                <div class="form-step">
-
-                    <img id="output_second" class="placed_image"/>
-                    <div class="edit_image">
-                        <a href="#" class="btn-prev ">Edit image</a>
-                    </div>
-                    <div class="input-group">
-                        <label for="SLIDE_TITLE">Slide title</label>
-                        <input  type="text" name="SLIDE_TITLE" id="SLIDE_TITLE" >
-                    </div>
-                    <div class="input-group">
-                        <label for="DESCRIPTION">Description</label>
-                        <input  type="text" name="DESCRIPTION" id="DESCRIPTION" >
-                    </div>
-                    <div class="btns-group">
-                        <a href="#" class="btn btn-prev">Previous</a>
-                        <button type="submit" name="submition" class="btn" >Save changes</button>     
-                    </div>
+                <div class="col-12">
+                    <button class="btn_option">Select</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-
-    
-
-  
-
+    <form action="#" class="form" id="myForm" method="POST"  enctype="multipart/form-data">
+        <div class="row  justify-content-center "> 
+                    <!-- Steps -->
+                    <div class="form-step col-xl-6 col-lg-6 col-md-6">
+                        <div class="input-group">
+                            <label for="SLIDE_TITLE">Slide title</label>
+                            <input  type="text" name="user_title" id="user_title" >
+                        </div>
+                        <div class="input-group">
+                            <label for="DESCRIPTION">Description</label>
+                            <input  type="text" name="user_description" id="user_description" >
+                        </div>
+                    </div>
+                    <div class="form-step col-xl-6 col-lg-6 col-md-6">
+                        <div class="input-group ">
+                            
+                        <img id="output" class="placed_image"/>
+                        <!-- <label for="slide_image">Picture</label> -->
+                        
+                        
+                        <input type="file" name="slide_image" id="slide_image" class="center_filling" accept="*/image" onchange="loadFile(event)">
+                        
+                        </div>
+                        <div class="btns-group">
+                        <!-- <a href="#" class="btn btn-next">Next</a> -->
+                        <button type="submit"  name="" class="btn btn-next " >Save changes</button>   
+                        </div>
+                    </div>
+        </div>
+    </form>
     <script src="js/script_admin.js"></script>  
-
-
-
 </body>
-</html>
-
-
 </html>
