@@ -92,18 +92,6 @@ $conn = null;
     
 </head>
 <body>
-    <!-- <div class="sidebar_cont">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
-                <li><a href="#"><i class="fas fa-users"></i>Team</a></li>
-                <li class="notification1"><a href="#"><i class="fas fa-calendar-week"></i>Calender</a></li>
-                <li class="notification2"><a href="#"><i class="far fa-envelope"></i>Documents</a></li>
-                </li>
-                <li><a href="#"><i class="fas fa-signal"></i>Reports</a></li>
-            </ul>
-        </div>
-    </div> -->
     <div class="row">
         <div class="col-sm-3 sidebar-contnain">
             
@@ -166,9 +154,6 @@ $conn = null;
                     <button type="submit" onclick="return validat_form()" name="" class="btn btn-next " >Next</button>   
                     </div>
                 </div>
-                <!-- </form>
-                <form action="#" class="form" id="myForm" method="POST"  enctype="multipart/form-data">  -->
-
                 <div class="form-step">
 
                     <img id="output_second" class="placed_image"/>
@@ -189,10 +174,6 @@ $conn = null;
                     </div>
                 </div>
             </form>
-
-            <!-- <form action="#" class="form" method="POST" ID="second_form" enctype="multipart/form-data">
-            </form> -->
-
         </div>
     </div>
 
