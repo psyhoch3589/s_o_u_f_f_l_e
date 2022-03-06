@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="home_client.css">
+    <link rel="stylesheet" href="dynamic_about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,12 +93,136 @@
                 </div>
             </div>
         </div>
-        <div class="home_info">
+        <!-- <div class="home_info">
+            <hr>
+            <h1>TITLE1</h1>
+            <img src="home_src_client/test.jpg" height="600px" width="1000px">
+        </div> -->
+    </div>
+
+    <!-- dynamic bar -->
+    
+    <div class="first_container">
+        <div class="second_container">
+                <div id="cards" class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                            <img src="home_src_client/healthcare1.png">
+                                <div class="header_center">
+                                    <h2 id="header_h2">Card 1</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare2.png">
+                                <div class="header_center">
+                                    <h2 id="header_h2">Card 2</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare3.png">
+                                <div class="header_center">
+                                        <h2 id="header_h2">Card 3</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare4.png">
+                                <div class="header_center">
+                                        <h2 id="header_h2">Card 4</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare1.png">
+                                <div class="header_center">
+                                        <h2 id="header_h2">Card 1</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare2.png">
+                                <div class="header_center">
+                                    <h2 id="header_h2">Card 2</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="content">
+                                <img src="home_src_client/healthcare3.png">
+                                <div class="header_center">
+                                        <h2 id="header_h2">Card 3</h2>
+                                </div>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </div>
+        
+
+    </div>
+
+
+    <div class="home_info">
             <hr>
             <h1>TITLE1</h1>
             <img src="home_src_client/test.jpg" height="600px" width="1000px">
         </div>
-    </div>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
     
     <!--home mobile-->
     <div class="home_testo row px-0 nopadding">

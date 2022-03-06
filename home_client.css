@@ -260,7 +260,7 @@ box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 4px -1px 12
     .home_image 
     {
         background-image: url("home_src_client/test.jpg");
-        height: 750px;
+        height: 850px;
         background-position: 50%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -272,13 +272,13 @@ box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 4px -1px 12
     }
     .testo
     {
-        height: 750px;
+        height: 850px;
         background: rgba(0, 0, 0, 0.4);
     }
     .testooo
     {
         position: absolute;
-        top:28%;
+        top:23%;
         left: 4%;
         height: 49%;
         width: 40%;
