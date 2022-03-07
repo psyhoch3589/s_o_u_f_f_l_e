@@ -1,8 +1,8 @@
 .first_container{   /*just to center the banner*/
     display: flex;
     justify-content: center;
-    position :absolute;
-    top: 650px;
+    margin-top: 650px;
+    margin-bottom: -100px;
     left: 10%;
 }
 

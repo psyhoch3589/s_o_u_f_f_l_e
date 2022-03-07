@@ -9,13 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="home_client.css">
-    <link rel="stylesheet" href="dynamic_about.css">
+    <link rel="stylesheet" href="dynamic_home.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="home_client.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+
     <title>test</title>
 </head>
 <body>
@@ -93,11 +100,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="home_info">
-            <hr>
-            <h1>TITLE1</h1>
-            <img src="home_src_client/test.jpg" height="600px" width="1000px">
-        </div> -->
     </div>
 
     <!-- dynamic bar -->
@@ -204,21 +206,11 @@
     </div>
 
 
-    <div class="home_info">
+    <!-- <div class="home_info">
             <hr>
             <h1>TITLE1</h1>
             <img src="home_src_client/test.jpg" height="600px" width="1000px">
-        </div>
-
-
-
-
-
-
-    
-
-
-
+    </div> -->
 
 
 
@@ -232,5 +224,106 @@
             </div>
         </div>
     </div>
+
+<!-- About section ------------------------------------------------>
+
+    <div class="section">
+
+		<div class="container_prime">
+
+			<div class="title">
+				<h1>About Us</h1>
+			</div>
+	
+			<div class="content_prime">
+				<div class="title_prime">
+					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+				</div>
+				<div class="text_prime">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+
+				<div class="button_division">
+					<div class="button">
+						<a href="">Read More</a>
+					</div>
+					<div class="button">
+						<a href="">Read More</a>
+					</div>
+
+				</div>
+				
+			</div>
+
+		</div>
+
+		<div class="container">
+			
+			<div class="image-section">
+				<img src="home_src_client/img_one.jpg">				
+			</div>
+			
+			<div class="content-section">
+
+				<div class="content">
+					<div class="title_second">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					</div>
+					<div class="sub_title_second">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<div class="button">
+						<a href="">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- statistic counter--------------------->
+
+    <div class="counter-up" >
+		<div class="content">
+		  <div class="box">
+			<div class="icon"><i class="fas fa-history"></i></div>
+			<div class="counter">724</div>
+			<div class="text">Working Hours</div>
+		  </div>
+		  <div class="box">
+			<div class="icon"><i class="fas fa-gift"></i></div>
+			<div class="counter">508</div>
+			<div class="text">Completed Projects</div>
+		  </div>
+		  <div class="box">
+			<div class="icon"><i class="fas fa-users"></i></div>
+			<div class="counter">436</div>
+			<div class="text">Happy Clients</div>
+		  </div>
+		  <div class="box">
+			<div class="icon"><i class="fas fa-award"></i></div>
+			<div class="counter">120</div>
+			<div class="text">Awards Received</div>
+		  </div>
+		</div>
+	  </div>
+	  <script>
+	  $(document).ready(function(){
+		$('.counter').counterUp({
+		  delay: 30,
+		  time: 1500   /*1200*/
+		});
+	  });
+	  </script>
+
+
+
+
 </body>
 </html>
