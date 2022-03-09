@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="home_client.js"></script>
+    <link rel="stylesheet" href="projects_client.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -206,13 +207,6 @@
     </div>
 
 
-    <!-- <div class="home_info">
-            <hr>
-            <h1>TITLE1</h1>
-            <img src="home_src_client/test.jpg" height="600px" width="1000px">
-    </div> -->
-
-
 
 
     
@@ -312,16 +306,54 @@
 			<div class="text">Awards Received</div>
 		  </div>
 		</div>
-	  </div>
-	  <script>
-	  $(document).ready(function(){
-		$('.counter').counterUp({
-		  delay: 30,
-		  time: 1500   /*1200*/
-		});
-	  });
-	  </script>
-
+    </div>
+    <script>
+    $(document).ready(function(){
+    $('.counter').counterUp({
+        delay: 30,
+        time: 1500   /*1200*/
+    });
+    });
+    </script>
+    <?php
+    try{
+        $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+    }catch(exception $e){
+        Die("ERROR".$e->getMessage());
+    }
+    $info=$mydatabase->query("select * from Projects");
+    $row=$info->fetch(PDO::FETCH_NUM);
+    $mydatabase=null;
+    ?>
+    <div class="cont container-fluid nopadding">
+        <div class="Proj_title">
+            <h1><?php echo $row[0];?></h1>
+            <p><?php echo $row[1];?></p>
+        </div>
+        <div class="cont_step row">
+            <div class="test_proj col-lg-3 col-xl-3 nopadding">
+                <img src=<?php echo $row[2];?> class="cont_step_left">
+                <h4><?php echo $row[3];?></h4>
+                <p><?php echo $row[4];?></p>
+                <button class="button_more">learn more</button>
+            </div>
+            <div style="width:2%"></div>
+            <div class="test_proj col-lg-3 col-xl-3 nopadding">
+                <img src=<?php echo $row[5];?> class="cont_step_center">
+                <h4><?php echo $row[6];?></h4>
+                <p><?php echo $row[7];?></p>
+                <button class="button_more">learn more</button>
+            </div>
+            <div style="width:2%"></div>
+            <div class="test_proj tt col-lg-3 col-xl-3 nopadding">
+                <img src=<?php echo $row[8];?> class="cont_step_right">
+                <h4><?php echo $row[9];?></h4>
+                <p><?php echo $row[10];?></p>
+                <button class="button_more">learn more</button>
+            </div>
+        </div>
+    </div>
+   
 
 
 

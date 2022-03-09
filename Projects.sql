@@ -1,0 +1,1 @@
+create table Projects(titre varchar(150) Not NUll,descr varchar(300) Not NULL,img_title_1 varchar(150) Not NUll,titre_1 varchar(150) Not NUll,descr_1 varchar(300) Not NULL,img_title_2 varchar(150) Not NUll,titre_2 varchar(150) Not NUll,descr_2 varchar(300) Not NULL,img_title_3 varchar(150) Not NUll,titre_3 varchar(150) Not NUll,descr_3 varchar(300) Not NULL);
