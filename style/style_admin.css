@@ -1,12 +1,7 @@
 @import url('https://fonts.google.com/specimen/Poppins?query=poppin');
 
 
-html {
-  scroll-behavior: smooth;
-  overflow: scroll; 
-  
-  
-}
+
 
 
 :root {
@@ -60,8 +55,6 @@ label {
 input {
   display: block;
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
 
@@ -135,28 +128,25 @@ input {
 }
 
 /* Form */
-.form {
-  width: 80%;
-  margin: 4rem auto 5rem;
-  border: 1px solid #ccc;
-  border-radius: 0.35rem;
-  padding: 2rem;
-}
-.form-step:not(:last-child)
+.form-step h1
 {
-  border-right: 1px solid rgb(212, 210, 210);
+  margin-top: 8%;
+  padding-left:40%;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
-.form-step:first-child
+.form h1
 {
-  padding-right: 4%;
+  margin-top: 4%;
+  margin-left: 47%;
 }
-.form-step:last-child
+.formm
 {
-  padding-left: 4%;
-}
-
-.input-group {
-  margin: 2rem 0;
+  width: 90%;
+  margin-left: 6%;
+  margin-top: 6%;
+  border: 1px solid rgb(190, 186, 186);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
 }
 
 @keyframes animate {
@@ -170,54 +160,42 @@ input {
   }
 }
 
+.input-group
+{
+  padding: 20px;
+}
 /* Button */
-.btns-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+.btns-group
+{
+  margin-top: 5%;
 }
-
-.btn {
-  padding: 0.75rem;
-  display: block;
-  text-decoration: none;
-  background-color: var(--primary-color);
-  color: #f3f3f3;
+.btn-submit
+{
+  background-color: #F75E61;
   text-align: center;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: 0.3s;
+  border: none;
+  color: #fff;
+  height: 50px;
+  width: 170px;
+  font-size: 20px;
 }
-.btn:hover {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+.btn-submit:hover
+{
+  background-color: black;
+  color: #fff;
 }
-
-/* .filling{
-  margin: auto;
-  text-align: center; 
-} */
 
 .center_filling{
-    /* height: 10.31rem;
-    padding: 0% 0% ;    */
     margin-top: 1rem;
 }
 
 
 
 
-/* .hide { position:absolute;
-   top:-1px; left:-1px; width:0px; height:0px; 
-   background-color: var(--primary-color);
-  } */
-
-
 .placed_image{
 
   display: block;
   width: 100%;
-  /* padding: 0.75rem; */
-  /* border: 1px solid #ccc; */
   border-radius: 0.25rem;
 }
 

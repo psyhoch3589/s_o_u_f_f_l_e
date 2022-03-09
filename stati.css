@@ -1,0 +1,106 @@
+@media(min-width:768px)
+{
+    .form_stati
+    {
+        width: 91%;
+    }
+    .form_stati h1
+    {
+        margin-left: 45.8%;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
+    .head
+    {
+        display: flex;
+    }
+    .add_btn {
+        margin-top: 40px;
+        background-color: green;
+        text-align: center;
+        border: none;
+        color: #fff;
+        height: 50px;
+        width: 190px;
+        font-size: 20px;
+    }
+    .form_step_text_stati
+    {
+        margin-left: 5.5%;
+        border: 1px solid rgb(190, 186, 186);
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
+    }
+    .form_step_stati
+    {
+        height: 250px;
+    }
+    .form_title div
+    {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .form_title h5
+    {
+        
+        font-weight: bold;
+    }
+    .form_stati_item
+    {
+        margin-bottom: 10px;
+    }
+    .form_stati_item div
+    {
+        text-align: center;
+    }
+    .form_stati_item input
+    {
+        border: 1px solid gray;
+    }
+    .status-btn-disabled
+    {
+        background-color: rgb(196, 6, 6);
+        border-radius: 10px;
+        border: none;
+
+    }
+    .status-btn-enabled
+    {
+        background-color: greenyellow;
+        border-radius: 10px;
+        border: none;
+    }
+    .status-btn-delete
+    {
+        border: none;
+        text-decoration: underline;
+        background-color: #fff;
+        color: rgb(95, 17, 238);
+    }
+    .status-btn-add
+    {
+        border: none;
+        text-decoration: underline;
+        background-color: #fff;
+        color: rgb(95, 17, 238);
+    }
+    .ttt
+    {
+        text-align: center;
+    }
+    .btn_submit_about
+    {
+        margin-top: 40px;
+        background-color: #F75E61;
+        text-align: center;
+        border: none;
+        color: #fff;
+        height: 50px;
+        width: 190px;
+        font-size: 20px;
+    }
+    .btn-submit:hover
+    {
+        background-color: black;
+        color: #fff;
+    }
+}

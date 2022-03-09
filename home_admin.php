@@ -20,7 +20,7 @@ try {
         $SLIDE_TITLE= $_POST["SLIDE_TITLE"];
         $DESCRIPTION= $_POST["DESCRIPTION"];
 
-        $stmt = $conn->prepare("INSERT INTO annonce
+        $stmt = $conn->prepare("INSERT INTO about
         VALUES (:ID, :SLIDE_TITLE, :DESCRIPTIONN , :IMAGE_NAME)");
 
         $stmt->bindParam(':ID', $ID_number);
@@ -46,7 +46,7 @@ try {
         $tmp_dir=$_FILES['slide_image']['tmp_name'];
         $imageSize=$_FILES['slide_image']['size'];
 
-        $upload_dir='uploads_admin/';
+        $upload_dir='ressources/';
         // $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
         $valid_extensions=array('jpeg','jpg','png','gif','pdf');
         // $picSlide=$images.".".$imgExt;
@@ -75,85 +75,39 @@ $conn = null;
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>profile</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style/style_admin.css" />
-  <link rel="stylesheet" href="test.css">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-    
-    
-    
-</head>
-<body>
-    <div class="options row">
-        <div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
-            <div class="option1 row">
-                <div class="col-12">
-                    <p>HOME</p>
-                </div>
-                <div class="col-12">
-                    <button class="btn_option">Select</button>
-                </div>
+
+        
+<form action="#" class="form" id="myForm" method="POST"  enctype="multipart/form-data">
+    <h1>title1</h1>
+        <!-- Steps -->
+    <div class="formm row">
+        <div class="form-step col-xl-6 col-lg-6 col-md-6">
+            <div class="input-group">
+                <label for="SLIDE_TITLE">Slide title</label>
+                <input  type="text" name="user_title" id="user_title" >
+            </div>
+            <div class="input-group" style="padding-bottom: 60px;">
+                <label for="DESCRIPTION">Description</label>
+                <input  type="text" name="user_description" id="user_description" >
             </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
-            <div class="option1 row">
-                <div class="col-12">
-                    <p>ABOUT</p>
-                </div>
-                <div class="col-12">
-                    <button class="btn_option">Select</button>
-                </div>
-            </div>
-        </div><div class="col-xl-3 col-lg-3 col-md-3 option_box Home">
-            <div class="option1 row">
-                <div class="col-12">
-                    <p>PROJECTS</p>
-                </div>
-                <div class="col-12">
-                    <button class="btn_option">Select</button>
-                </div>
+        <div class="form-step col-xl-6 col-lg-6 col-md-6">
+            <div class="input-group ">
+                
+            <img id="output" class="placed_image"/>
+            <!-- <label for="slide_image">Picture</label> -->
+            
+            
+            <input type="file" name="slide_image" id="slide_image" class="center_filling" accept="*/image" onchange="loadFile(event)">
+            
             </div>
         </div>
     </div>
-    <form action="#" class="form" id="myForm" method="POST"  enctype="multipart/form-data">
-        <div class="row  justify-content-center "> 
-                    <!-- Steps -->
-                    <div class="form-step col-xl-6 col-lg-6 col-md-6">
-                        <div class="input-group">
-                            <label for="SLIDE_TITLE">Slide title</label>
-                            <input  type="text" name="user_title" id="user_title" >
-                        </div>
-                        <div class="input-group">
-                            <label for="DESCRIPTION">Description</label>
-                            <input  type="text" name="user_description" id="user_description" >
-                        </div>
-                    </div>
-                    <div class="form-step col-xl-6 col-lg-6 col-md-6">
-                        <div class="input-group ">
-                            
-                        <img id="output" class="placed_image"/>
-                        <!-- <label for="slide_image">Picture</label> -->
-                        
-                        
-                        <input type="file" name="slide_image" id="slide_image" class="center_filling" accept="*/image" onchange="loadFile(event)">
-                        
-                        </div>
-                        <div class="btns-group">
-                        <!-- <a href="#" class="btn btn-next">Next</a> -->
-                        <button type="submit"  name="" class="btn btn-next " >Save changes</button>   
-                        </div>
-                    </div>
-        </div>
-    </form>
-    <script src="js/script_admin.js"></script>  
-</body>
-</html>
+    <div class="btns-group row">
+        <!-- <a href="#" class="btn btn-next">Next</a> -->
+        <div class="col-md-8 col-lg-8 col-xl-8"></div>
+        <div class="col-md-4 col-lg-4 col-xl-4">
+            <button type="submit"  name="" class="btn-submit">Save changes</button>
+        </div> 
+    </div>
+</form>
