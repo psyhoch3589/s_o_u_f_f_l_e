@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="head3 col-md-1 col-lg-1 col-xl-1">
-                <a href="home_admin.php">I'm a member</a>
+                <a href="admin_blueprint.php">I'm a member</a>
             </div>
         </div>
     </div>
