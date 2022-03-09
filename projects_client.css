@@ -19,6 +19,7 @@
     }
     .test_proj{
         background-color: #fff;
+        width: 50%;
         padding-bottom: 30px !important;
         margin-bottom: 20px !important;
         border-radius: 0px 15px 0px 15px;
