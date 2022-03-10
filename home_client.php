@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="home_client.js"></script>
     <link rel="stylesheet" href="projects_client.css">
+    <link rel="stylesheet" href="donate.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -353,7 +354,28 @@
             </div>
         </div>
     </div>
-   
+    <div class="container_donation">
+        <div class="container_donation_couche row">
+            <div class="cont1 col-md-7 col-lg-7 col-xl-7">
+                <h1>Your Help Can<br>Change The<br>World</h1>
+            </div>
+            <div class="cont2 col-md-4 col-lg-4 col-xl-4 justify-content-right">
+                <form action="" method="POST" class="cont2_form">
+                    <div class="donate_cont">
+                        <div class="donate_cont1">
+                            <h3>Donate Now</h3>
+                        </div>
+                        <div class="donate_cont2">
+                            <input type="text" name="Amount" class="Amount" placeholder="Enter the Amount">
+                            <input type="text" name="Name_donation" class="Name_donation" placeholder="Name">
+                            <input type="text" name="Adress_donation" class="Adress_donation" placeholder="Adresse">
+                            <button type="submit" class="donate-btnn">Donate Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 

@@ -1,0 +1,75 @@
+@media(min-width:768px){
+    .container_donation
+    {
+        background-image: url("T5-copie-1-1920x1080.jpg");
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:50% 50% ;
+    }
+    .container_donation_couche
+    {
+        background-color: rgba(0,0,0,0.2);
+        height: 400px;
+    }
+    .cont1
+    {
+        color: #fff;
+    }
+    .cont1 h1{
+        padding-top: 12%;
+        font-weight: bold;
+        padding-left: 20%;
+    }
+    .donate_cont
+    {
+        height: 90%;
+        background-color: #F75161;
+        margin-top: 2%;
+        border-radius: 5px;
+        margin-right: 20%;
+    }
+    .donate_cont1
+    {
+        padding-top: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .donate_cont2
+    {
+        text-align: center;
+    }
+    .donate_cont2 input
+    {
+        margin-top: 4%;
+        width: 80%;
+        height: 40px;
+        border: none;
+        border-radius: 5px; 
+        padding-left: 10px;
+    }
+    .cont2
+    {
+        margin-top: 30px;
+    }
+    .cont2_form{
+        height: 100%;
+    }
+    .donate-btnn
+    {
+        margin-top: 20px;
+        padding: 5px;
+        border: none;
+        background-color: #fff;
+        height: 45px;
+        width: 80%;
+        border-radius: 5px;
+        color: #F75161;
+    }
+    .donate-btnn:hover
+    {
+        background-color: #F75161;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+}
