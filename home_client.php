@@ -407,7 +407,7 @@
 
         <div class="contact-form">
 
-          <form action="index.html" autocomplete="off">
+          <form class="second_form" action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container_contact">
               <input type="text" name="name" class="input" />
