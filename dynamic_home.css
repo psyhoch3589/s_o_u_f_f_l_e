@@ -26,6 +26,10 @@
         height: 300px;
         animation: slide_mobile 15s infinite; 
     }
+    .first_container
+    {
+        display: none;
+    }
     
   }
 

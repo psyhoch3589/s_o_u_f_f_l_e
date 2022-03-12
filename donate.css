@@ -73,3 +73,53 @@
         border: 2px solid #fff;
     }
 }
+@media(max-width:768px){
+    .cont1{
+        display: none;
+    }
+    .cont2
+    {
+        text-align: center;
+    }
+    .cont2
+    {
+        margin-top: 30px;
+    }
+    .cont2_form{
+        height: 100%;
+    }
+    .donate-btnn
+    {
+        margin-top: 20px;
+        padding: 5px;
+        border: none;
+        background-color: #fff;
+        height: 45px;
+        width: 90%;
+        border-radius: 5px;
+        color: #F75161;
+    }
+    .donate-btnn:hover
+    {
+        background-color: #F75161;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+    .donate_cont2 input
+    {
+        margin-top: 4%;
+        width: 90%;
+        height: 40px;
+        border: none;
+        border-radius: 5px; 
+        padding-left: 10px;
+    }
+    .container_donation_couche
+    {
+        background-color: #F75161;
+        height: 350px;
+        width: 80%;
+        margin-left: 10% !important;
+        border-radius: 10px;
+    }
+}

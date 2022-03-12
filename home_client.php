@@ -51,11 +51,11 @@
     </div>
     <!--barre d'en haut pour Desktop-->
     <div class="container-fluid px-0 bar" id="barre_test">
-        <div class="barr row ">
+        <div class="barr row nopadding">
             <div class="col-md-2 col-lg-5 col-xl-6">
                 <h2 class="logo" id="mylogo">Souffle<span class="test">.</span></h2>
             </div>
-            <div class=" navbar navbar-expand-sm col-lg-7 col-md-10 col-xl-6">
+            <div class=" navbar navbar-expand-sm col-lg-7 col-md-10 col-xl-5 nopadding">
                 <ul class="bar1 navbar-nav" id="items-links">
                     <li class="nav-item">
                         <a class="nav-link link" href="#home">HOME</a>
@@ -225,7 +225,7 @@
 
 <!-- About section ------------------------------------------------>
 
-    <div class="section">
+    <div class="section" style="display:none">
 
 		<div class="container_prime">
 
@@ -287,7 +287,7 @@
 
     <!-- statistic counter--------------------->
 
-    <div class="counter-up" >
+    <div class="counter-up" style="display:none">
 		<div class="content">
 		  <div class="box">
 			<div class="icon"><i class="fas fa-history"></i></div>
@@ -319,6 +319,7 @@
     });
     });
     </script>
+    <!----------------------------Project--------------------------------->
     <?php
     try{
         $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
@@ -332,7 +333,7 @@
     <div class="cont container-fluid nopadding">
         <div class="Proj_title">
             <h1><?php echo $row[0];?></h1>
-            <p><?php echo $row[1];?></p>
+            <?php //<p><?php echo $row[1];</p>?>
         </div>
         <div class="cont_step row">
             <div class="test_proj col-lg-3 col-xl-3 nopadding">
@@ -360,7 +361,7 @@
 
 <!-- contact form ---------------------------------------------------->
 
-<div class="big_container_contact">
+<div class="big_container_contact" style="display:none">
     <div class="container_contact">
       
       <div class="form">
@@ -447,7 +448,7 @@
             <div class="cont1 col-md-7 col-lg-7 col-xl-7">
                 <h1>Your Help Can<br>Change The<br>World</h1>
             </div>
-            <div class="cont2 col-md-4 col-lg-4 col-xl-4 justify-content-right">
+            <div class="cont2 col-12 col-sm-12 col-xs-12 col-md-4 col-lg-4 col-xl-4 justify-content-right">
                 <form action="" method="POST" class="cont2_form">
                     <div class="donate_cont">
                         <div class="donate_cont1">
