@@ -8,8 +8,8 @@
 .section{
     width: 100%;
     min-height: 100vh;
-    display: block;
-    overflow: auto;
+    /* display: block;
+    overflow: auto; */
     
 
     top: 850px;
@@ -22,7 +22,7 @@
 	width: 80%;
     margin: auto;
     text-align: center;
-	padding: 0px 20px;
+	padding: 15px 20px;
 }
 
 
@@ -149,13 +149,7 @@
 
 
 @media screen and (max-width: 768px){
-    .section{
-        display: block;
-        overflow: auto;
-    }
-
-
-
+    
 	.container{
 	width: 80%;
 	display: block;

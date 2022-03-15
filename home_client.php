@@ -289,7 +289,7 @@
 
     <!-- statistic counter--------------------->
 
-    <div class="counter-up" style="display:none">
+    <div class="counter-up" >
 		<div class="content">
 		  <div class="box">
 			<div class="icon"><i class="fas fa-history"></i></div>
@@ -369,10 +369,12 @@
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
+          <div>
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             dolorum adipisci recusandae praesentium dicta!
           </p>
+          </div>
 
           <div class="info">
             <div class="information">

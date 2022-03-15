@@ -11,6 +11,17 @@
 
 
 @media screen and (max-width: 992px) {    /*mobile*/
+    .first_container{   /*just to center the banner*/
+        display: flex;
+        justify-content: center;
+        margin-top: -51px;
+        margin-bottom: -100px;
+        left: 10%;
+    }
+    
+    
+    
+    
     .second_container {
         
         width: 720px;
