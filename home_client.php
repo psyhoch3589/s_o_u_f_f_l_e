@@ -106,6 +106,15 @@
             </div>
         </div>
     </div>
+    
+    <!--home mobile-->
+    <div class="home_testo row px-0 nopadding">
+        <div class="home_test_mobile col-12 col-sm-12 col-xs-12 nopadding">
+            <div class="testoo">
+                <h1>Make the world<br>a better place</h1>
+            </div>
+        </div>
+    </div>
 
     <!-- dynamic bar -->
     
@@ -214,14 +223,7 @@
 
 
     
-    <!--home mobile-->
-    <div class="home_testo row px-0 nopadding">
-        <div class="home_test_mobile col-12 col-sm-12 col-xs-12 nopadding">
-            <div class="testoo">
-                <h1>Make the world<br>a better place</h1>
-            </div>
-        </div>
-    </div>
+    
 
 <!-- About section ------------------------------------------------>
 
