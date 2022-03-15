@@ -35,15 +35,13 @@
     }
     .bar_notif_admin
     {
-        height: 50px;
+        height: 60px;
         background-color: #F5F5F5;
         display: flex;
     }
-    .bar_notif_admin img{
-        width: 40px;
-        height: 45px;
-        background: none;
-        padding-top: 5px;
+    .input-group
+    {
+        padding: 10px !important;
     }
     .search_bar
     {
@@ -72,5 +70,18 @@
     .visited
     {
         background-color: rgb(218, 198, 198);
+    }
+    .bar_notif_admin2
+    {
+        justify-content: right;
+    }
+    .bar_notif_admin2 button{
+        border: none;
+        width: 150px;
+        background-color: #F75E61;
+    }
+    .bar_notif_admin2 button:hover{
+        background-color: black;
+        color: #fff;
     }
 }

@@ -12,6 +12,7 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/style_admin.css" />
   <link rel="stylesheet" href="test.css">
   <link rel="stylesheet" href="About_admin.css">
@@ -48,8 +49,14 @@ session_start();
             </form>
         </div>
         <div class="sec_admin col-md-10 col-lg-10 col-xl-10 nopadding">
-            <div class="bar_notif_admin container-fluid ">
-                <input type="text" placeholder="search" class="search_bar">
+            <div class="row nopadding">
+                <div class="input-group bar_notif_admin col-md-4 col-lg-4 col-xl-4">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary">search</button>
+                </div>
+                <div class=" bar_notif_admin col-md-8 col-lg-8 col-xl-8 bar_notif_admin2">
+                    <button type="submit">LogOut</button>
+                </div>
             </div>
             <?php
             $namee="d".$_SESSION["contact"];
