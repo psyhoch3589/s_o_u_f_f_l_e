@@ -225,7 +225,7 @@
 
 <!-- About section ------------------------------------------------>
 
-    <div class="section" style="display:none">
+    <div class="section">
 
 		<div class="container_prime">
 
@@ -361,7 +361,7 @@
 
 <!-- contact form ---------------------------------------------------->
 
-<div class="big_container_contact" style="display:none">
+<div class="big_container_contact" >
     <div class="container_contact">
       
       <div class="form">
