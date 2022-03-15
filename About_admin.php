@@ -37,4 +37,29 @@
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2"></div>
     </div>
+    <?php
+    if(isset($_POST["submit"])){
+        try
+        {
+            $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+        }
+        catch(exception $e){
+            Die("ERROR".$e->getMessage());
+        }
+
+        $picSlide=$_FILES['slide_image']['name'];
+        $tmp_dir=$_FILES['slide_image']['tmp_name'];
+        $upload_dir="ressources/";
+        move_uploaded_file($tmp_dir, $upload_dir.$picSlide);
+
+        $t1=$_POST["user_title"];
+        $d1=$_POST["user_description"];
+        $t2=$_POST["user_titlee"];
+        $d2=$_POST["user_descriptionn"];
+        $sql=$mydatabase->prepare("insert into about value(?,?,?,?,?)");
+        $sql->execute(array($t1,$d1,$t2,$d2,$upload_dir.$picSlide));
+        include "About_admin.php";
+        echo "<script>document.getElementById('about').classList.add('visited');</script>";
+    }
+    ?>
 </form>

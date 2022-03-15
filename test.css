@@ -36,17 +36,24 @@
     .bar_notif_admin
     {
         height: 50px;
-        background-color: #dee1e4;
-
+        background-color: #F5F5F5;
+        display: flex;
+    }
+    .bar_notif_admin img{
+        width: 40px;
+        height: 45px;
+        background: none;
+        padding-top: 5px;
     }
     .search_bar
     {
         width: 30%;
         height: 40px;
         border: 1px solid gray;
-        border-radius: 10px;
+        margin-top: 5px;
+        /* border-radius: 10px;
         position: absolute;
-        top: 4.5px;
+        top: 4.5px; */
     }
     .btn_option
     {

@@ -1,0 +1,119 @@
+@media(min-width:768px){
+    .nopadding{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .cont1_chat
+    {
+        height: 100vh;
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .head
+    {
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .cont2_chat_head
+    {
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .cont2_chat
+    {
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+    }
+    .cont1_chat_contact
+    {
+        text-align: center;
+    }
+    .cont1_chat div:not(.cont1_chat_contact){
+        height: 100px;
+        padding: 20px;
+    }
+    .cont1_chat div:not(.cont1_chat_contact):hover{
+        background-color: aliceblue;
+    }
+    .cont1_chat div:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .cont2_chat_head
+    {
+        text-align: center;
+        background-color: aliceblue;
+        height: 70px;
+    }
+    .cont_messg
+     {
+         border: 1px solid blue;
+         width: 50%;
+         margin-bottom: 10px;
+         margin-left: 20px;
+         border-radius: 0px 10px 10px 10px;
+         background-color: skyblue;
+     }
+     .cont_messg2
+     {
+         border: 1px solid yellowgreen;
+         width: 50%;
+         margin-bottom: 10px;
+         margin-left: 50%;
+         border-radius: 10px 0px 10px 10px;
+         background-color: violet;
+     }
+     .cont_chat_respond
+     {
+        position: sticky;
+        bottom: 0;
+        background-color: green;
+        padding: 10px;
+        right: 0;
+        left: 10;
+     }
+     .cont_right
+     {
+         position: sticky;
+         height: 90%;
+     }
+     .nopaddingg
+     {
+         margin: 0 !important;
+     }
+     .cont_chat_respond input
+     {
+        height: 70px;
+        border: 1px solid gray;
+        border-radius: 10px;
+     }
+     .respond img{
+         background: none;
+         border-radius: 10px;
+     }
+     .cont1_chat_user
+     {
+         display: flex;
+     }
+     .select_contact
+     {
+         width: 100%;
+         border: none;
+         background-color: #fff;
+
+     }
+     .cont2_chat_body
+     {
+         margin-bottom: 10px;
+     }
+     .tt
+     {
+         width: 100%;
+     }
+}

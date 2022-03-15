@@ -1,7 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>profile</title>
+  <title>Administration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -13,6 +16,7 @@
   <link rel="stylesheet" href="test.css">
   <link rel="stylesheet" href="About_admin.css">
   <link rel="stylesheet" href="stati.css">
+  <link rel="stylesheet" href="chat.css">
     
     
     
@@ -48,52 +52,62 @@
                 <input type="text" placeholder="search" class="search_bar">
             </div>
             <?php
+            $namee="d".$_SESSION["contact"];
             if(isset($_POST['home'])) 
             {
-
+                $_SESSION["option"]=0;
                 include "Home_admin.php";
                 echo "<script>document.getElementById('home').classList.add('visited');</script>";
             }
-            else if(isset($_POST['about'])) 
+            else if(isset($_POST['about']) || isset($_POST["submit"])) 
             {
+                $_SESSION["option"]=1;
                 include "About_admin.php";
                 echo "<script>document.getElementById('about').classList.add('visited');</script>";
             }
             else if(isset($_POST['statistics']) || isset($_POST["add"]) || isset($_POST["add_item"])) 
             {
+                $_SESSION["option"]=2;
                 include "statistics.php";
                 echo "<script>document.getElementById('statistics').classList.add('visited');</script>";
             }
+            else if(isset($_POST['Messages']) || isset($_POST["respond"]) || isset($_POST[$namee]))
+            {
+                $_SESSION["option"]=4;
+                include "chat.php";
+                echo "<script>document.getElementById('chat').classList.add('visited');</script>";
+            }
             else{
-            
-                if(isset($_POST["submit"])){
-                    try
+                    if($_SESSION["option"]==0) 
                     {
-                        $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+                        $_SESSION["option"]=0;
+                        include "Home_admin.php";
+                        echo "<script>document.getElementById('home').classList.add('visited');</script>";
                     }
-                    catch(exception $e){
-                        Die("ERROR".$e->getMessage());
+                    else if($_SESSION["option"]==1) 
+                    {
+                        $_SESSION["option"]=1;
+                        include "About_admin.php";
+                        echo "<script>document.getElementById('about').classList.add('visited');</script>";
                     }
-
-                    $picSlide=$_FILES['slide_image']['name'];
-                    $tmp_dir=$_FILES['slide_image']['tmp_name'];
-                    $upload_dir="ressources/";
-                    move_uploaded_file($tmp_dir, $upload_dir.$picSlide);
-
-                    $t1=$_POST["user_title"];
-                    $d1=$_POST["user_description"];
-                    $t2=$_POST["user_titlee"];
-                    $d2=$_POST["user_descriptionn"];
-                    $sql=$mydatabase->prepare("insert into about value(?,?,?,?,?)");
-                    $sql->execute(array($t1,$d1,$t2,$d2,$upload_dir.$picSlide));
-                    include "About_admin.php";
-                    echo "<script>document.getElementById('about').classList.add('visited');</script>";
-                }
-                else 
-                {
-                    include "Home_admin.php";
-                    echo "<script>document.getElementById('home').classList.add('visited');</script>";
-                }
+                    else if($_SESSION["option"]==2) 
+                    {
+                        $_SESSION["option"]=2;
+                        include "statistics.php";
+                        echo "<script>document.getElementById('statistics').classList.add('visited');</script>";
+                    }
+                    else if($_SESSION["option"]==4)
+                    {
+                        $_SESSION["option"]=4;
+                        include "chat.php";
+                        echo "<script>document.getElementById('chat').classList.add('visited');</script>";
+                    }
+                    else 
+                    {   
+                    $_SESSION["option"]=0;
+                        include "Home_admin.php";
+                        echo "<script>document.getElementById('home').classList.add('visited');</script>";
+                    }
             }
             $mydatabase=null;
             ?>
