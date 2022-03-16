@@ -1,3 +1,11 @@
+<?php
+    try{
+        $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+    }catch(exception $e){
+        Die("ERROR".$e->getMessage());
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -326,11 +334,7 @@
     </script>
     <!----------------------------Project--------------------------------->
     <?php
-    try{
-        $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
-    }catch(exception $e){
-        Die("ERROR".$e->getMessage());
-    }
+    
     $info=$mydatabase->query("select * from Projects");
     $row=$info->fetch(PDO::FETCH_NUM);
     $mydatabase=null;
