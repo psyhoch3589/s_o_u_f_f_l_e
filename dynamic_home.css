@@ -1,3 +1,6 @@
+
+@media screen and (min-width: 768px){
+
 .first_container{   /*just to center the banner*/
     display: flex;
     justify-content: center;
@@ -6,29 +9,58 @@
     left: 10%;
 }
 
+#cards{
+    width: 800%;
+    /* background-color: rgb(83, 83, 88); */
+    display: flex;
+    height: 300px;
+    animation: slide 12s infinite; 
+}
+
+}
+
+@media screen and (max-width: 905px) and (min-width: 600px){
+
+.second_container {
+        
+    width: 720px;
+    overflow: hidden; 
+    height: 450px;
+    /* padding-top: 50px; */
+    
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .second_container {
+            
+        width: 400px;
+        overflow: hidden; 
+        height: 450px;
+        /* padding-top: 50px; */
+        
+    }
+    
+    }
 
 
 
-
-@media screen and (max-width: 992px) {    /*mobile*/
+@media screen and (max-width: 768px) {    /*mobile*/
     .first_container{   /*just to center the banner*/
         display: flex;
         justify-content: center;
         margin-bottom: -100px;
         left: 10%;
+        max-height: 399px;
+        margin-top: -103px;
     }
     
     
     
     
-    .second_container {
-        
-        width: 720px;
-        overflow: hidden; 
-        height: 450px;
-        padding-top: 50px;
-        
-    }
+
     #cards{
         width: 800%;
         /* background-color: rgb(83, 83, 88); */
@@ -40,7 +72,7 @@
   }
 
 
-  @media screen and (min-width: 992px) {   /*desktop*/
+  @media screen and (min-width: 905px) {   /*desktop*/
     .second_container{
         width: 1080px;
         
@@ -49,13 +81,7 @@
         height: 450px;
         padding-top: 50px;
     }
-    #cards{
-        width: 800%;
-        /* background-color: rgb(83, 83, 88); */
-        display: flex;
-        height: 300px;
-        animation: slide 12s infinite; 
-    }
+   
     
   }
 

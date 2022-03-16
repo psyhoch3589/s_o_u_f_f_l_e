@@ -137,7 +137,7 @@
                             <div class="content">
                             <img src="home_src_client/healthcare1.png">
                                 <div class="header_center">
-                                    <h2 id="header_h2">Card 1</h2>
+                                    <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -150,7 +150,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare2.png">
                                 <div class="header_center">
-                                    <h2 id="header_h2">Card 2</h2>
+                                    <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -163,7 +163,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare3.png">
                                 <div class="header_center">
-                                        <h2 id="header_h2">Card 3</h2>
+                                        <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -176,7 +176,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare4.png">
                                 <div class="header_center">
-                                        <h2 id="header_h2">Card 4</h2>
+                                        <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -189,7 +189,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare1.png">
                                 <div class="header_center">
-                                        <h2 id="header_h2">Card 1</h2>
+                                        <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -202,7 +202,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare2.png">
                                 <div class="header_center">
-                                    <h2 id="header_h2">Card 2</h2>
+                                    <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -215,7 +215,7 @@
                             <div class="content">
                                 <img src="home_src_client/healthcare3.png">
                                 <div class="header_center">
-                                        <h2 id="header_h2">Card 3</h2>
+                                        <h2 id="header_h2">Card</h2>
                                 </div>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley </p>
                                 <a href="#">Read More</a>
@@ -422,24 +422,16 @@
           <form class="second_form" action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container_contact">
-              <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              <span>Username</span>
+              <input type="text" name="name" class="input" placeholder="Username" />
             </div>
             <div class="input-container_contact">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
+              <input type="email" name="email" class="input" placeholder="Email"/>
             </div>
             <div class="input-container_contact">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
-              <span>Phone</span>
+              <input type="tel" name="phone" class="input" placeholder="Phone"/>
             </div>
             <div class="input-container_contact textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
+              <textarea name="message" class="input" placeholder="Message"></textarea>
             </div>
             <input type="submit" value="Send" class="btn" />
           </form>
