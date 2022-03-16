@@ -84,4 +84,27 @@
         background-color: black;
         color: #fff;
     }
+    .btn
+    {
+        color:#F75E61 !important;
+        height: 38px !important;
+        border-radius: 0px 3px 3px 0px;
+        border-top:1px solid #cfd2d4;
+        border-bottom:1px solid #cfd2d4;
+        border-right:1px solid #cfd2d4;
+        border-left:none;
+        color: black !important;
+    }
+    .btn:hover
+    {
+        background-color: #F75E61;
+        color: #fff !important;
+        border-top:1px solid #cfd2d4;
+        border-bottom:1px solid #cfd2d4;
+        border-right:1px solid #cfd2d4;
+    }
+    .form-control
+    {
+        border-radius: 3px 0px 0px 3px !important;
+    }
 }

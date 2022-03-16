@@ -35,9 +35,12 @@
     <div class="headerr container-fluid" id="testt">
         <div class="headerr2 row">
             <div class="head col-md-6 col-lg-7 col-xl-8">
-                <p>you want to work with us?</p>
-                <h5>Become a Volunter</h5>
-                <p style="padding-left:20%;font-size:16px;font-weight:bold">+212 707184109</p>
+                <img src="localisation.png" class="image">
+                <h5>Orlando, FL 32830, united States</h5>
+                <div class="info_head">
+                    <img src="phone.png" class="image">
+                    <p style="font-size:16px;font-weight:bold">+212 707184109</p>
+                </div>
             </div>
             <div class="col-md-5 col-lg-4 col-xl-3">
                 <div class="head2">
@@ -64,13 +67,13 @@
                         <a class="nav-link link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#section3">BLOG</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link link" href="#section1">PROJECTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link" href="#section2">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link" href="#section2">DONATE</a>
                     </li>
                 </ul>
             </div>
