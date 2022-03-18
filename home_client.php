@@ -4,7 +4,7 @@
     }catch(exception $e){
         Die("ERROR".$e->getMessage());
     }
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -468,8 +468,5 @@
             </div>
         </div>
     </div>
-
-
-
 </body>
 </html>

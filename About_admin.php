@@ -9,7 +9,6 @@
             <label for="louie">Louie</label>
         </div>
         <div class="form_step_text ">
-        <!-- <div class="form_step_about col-xl-6 col-lg-6 col-md-6"> -->
             <div class="input_group_about tesst">
                 <label for="SLIDE_TITLE">Title1</label>
                 <input  type="text" name="user_title" id="user_title" >
@@ -18,8 +17,6 @@
                 <label for="DESCRIPTION">Description1</label>
                 <input  type="text" name="user_description" id="user_description" >
             </div>
-        <!-- </div> -->
-        <!-- <div class="form_step_about col-xl-6 col-lg-6 col-md-6"> -->
             <div class="input_group_about">
                 <label for="SLIDE_TITLE">Title2</label>
                 <input  type="text" name="user_titlee" id="user_title" >
