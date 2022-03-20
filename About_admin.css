@@ -3,91 +3,68 @@
     body{
         background-color: rgb(255, 253, 253);
     }
-    .ty
-    {
-        display: flex;
-        margin-left: 30px;
-        margin-bottom: 20px;
-    }
-    .ty input{
-        margin-top: 10px;
-        width: 50px;
-    }
-    #louie{
-        margin-left: 50px !important;
-    }
     .form_about
     {
         width: 91%;
     }
     .form_about h1
     {
-        margin-left: 5%;
-        margin-top: 2%;
-        font-size: 30px;
-    }
-    .form_about h5
-    {
-        margin-top: 30px !important;
-        margin-left: 5%;
-        margin-top: 2%;
+        margin-left: 48%;
+        margin-bottom: 3%;
+        margin-top: 3%;
     }
     .form_step_text
     {
-        margin-left: 5%;
+        margin-left: 9%;
         background-color: #fff !important;
+        border: 1px solid rgb(190, 186, 186);
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
     }
     .input_group_about input
     {
-        border: 1px solid #d9d9d9;
-        height: 45px;
-        width: 80%;
-        border-radius: 3px;
-        margin-bottom: 10px;
+        border: 1px solid gray;
+        height: 40px;
     }
-    .sec_right
-    {
-        padding-top: 10%;
-    }
-    .last_sec
-    {
-        margin-top: 5%;
-        
-    }
-    /* .form_step_image
+    .form_step_image
     {
         margin-left: 9%;
         padding: 5px 5px 0px 5px;
         margin-top: 6%;
+        border: 1px solid rgb(190, 186, 186);
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
     }
     .placed_image_about{
 
         display: block;
         width: 100%;
         border-radius: 0.25rem;
-    } */
-    
+    }
+    .input_group_about_image
+    {
+        padding-bottom: 15px;
+    }
+    .ttt
+    {
+        text-align: center;
+    }
     .btn_submit_about
     {
+        margin-top: 40px;
+        background-color: #F75E61;
         text-align: center;
         border: none;
         color: #fff;
-        /* height: 50px;
-        width: 190px; */
+        height: 50px;
+        width: 190px;
         font-size: 20px;
-        background-color: rgb(14, 199, 14);
     }
     .btn-submit:hover
     {
         background-color: black;
         color: #fff;
     }
-    /* .tesst
+    .tesst
     {
-        padding-top: 4%;
-    } */
-    label{
-        margin-top: 5px;
-        font-weight: bold;
+        padding-top: 10%;
     }
 }

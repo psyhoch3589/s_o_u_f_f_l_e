@@ -6,6 +6,9 @@
     }
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +41,7 @@
 
     <title>test</title>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--bar d'enhaut pour Desktop-->
     <div class="headerr container-fluid" id="testt">
         <div class="headerr2 row">
@@ -46,7 +49,7 @@
                 <img src="localisation.png" class="image">
                 <h5>Orlando, FL 32830, united States</h5>
                 <div class="info_head">
-                    <img src="phone.png" class="image">
+                <img src="uploads_admin/phone.png" class="image">
                     <p style="font-size:16px;font-weight:bold">+212 707184109</p>
                 </div>
             </div>
@@ -75,13 +78,13 @@
                         <a class="nav-link link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#section1">PROJECTS</a>
+                        <a class="nav-link link" href="#proj">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#section2">CONTACT</a>
+                        <a class="nav-link link" href="#contact">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#section2">DONATE</a>
+                        <a class="nav-link link" href="#donate">DONATE</a>
                     </li>
                 </ul>
             </div>
@@ -105,31 +108,49 @@
             </nav>
         </div>
     <!--home_Desktop-->
-    <div class="home_test container-fluid nopadding" >
-        <div class="home_image container-fluid nopadding">
+        <?php
+        $sql=$mydatabase->query("select * from home");
+        $row=$sql->fetch(PDO::FETCH_NUM);
+        echo "<style>
+        .home_image{
+        background-image: url(".$row[2].");
+        }
+        </style>"
+        ?>
+        <div class="home_image container-fluid nopadding" id="home">
             <div class="testo">
                 <div class="testooo">
-                    <h1 id="tt"><span class="donate">DONATORS</span> FOR A <br>GOOD CAUSES</h1><hr style="background-color:#F75E61;width:90%">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Maecenas eget leo suscipit.Maecenas eget leo suscipit</p>
+                    <h1 id="tt"><?php echo $row[0]; ?></h1><hr style="background-color:#F75E61;width:90%">
+                    <p><?php echo $row[1]; ?></p>
+                    <button class="donate-btn">Donate now</button>
+                    <button class="raise-btn">Raise Refund</button>
+                </div>
+            </div>
+        </div>
+    
+    <!--home mobile-->
+    <?php
+    echo "<style>
+    .home_test_mobile{
+    background-image: url(".$row[2].");
+    }
+    </style>"
+    ?>
+    <div class="home_testo row px-0 nopadding">
+        <div class="home_test_mobile col-12 col-sm-12 col-xs-12 nopadding">
+            <div class="testoo">
+                <div class="testooo">
+                    <h1 id="tt"><?php echo $row[0]; ?></h1><hr style="background-color:#F75E61;width:90%">
                     <button class="donate-btn">Donate now</button>
                     <button class="raise-btn">Raise Refund</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!--home mobile-->
-    <div class="home_testo row px-0 nopadding">
-        <div class="home_test_mobile col-12 col-sm-12 col-xs-12 nopadding">
-            <div class="testoo">
-                <h1>Make the world<br>a better place</h1>
-            </div>
-        </div>
-    </div>
 
     <!-- dynamic bar -->
     
-    <div class="first_container">
+    <div class="first_container" >
         <div class="second_container">
                 <div id="cards" class="cards">
                     <div class="card">
@@ -144,7 +165,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="box">
                             <div class="content">
@@ -157,7 +177,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="box">
                             <div class="content">
@@ -170,7 +189,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="box">
                             <div class="content">
@@ -196,7 +214,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="card">
                         <div class="box">
                             <div class="content">
@@ -222,23 +239,12 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
         </div>
-        
-
     </div>
-
-
-
-
-    
-    
-
 <!-- About section ------------------------------------------------>
 
-    <div class="section">
+    <div class="sectionn" id="about">
 
 		<div class="container_prime">
 
@@ -334,12 +340,15 @@
     </script>
     <!----------------------------Project--------------------------------->
     <?php
-    
+    try{
+        $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+    }catch(exception $e){
+        Die("ERROR".$e->getMessage());
+    }
     $info=$mydatabase->query("select * from Projects");
     $row=$info->fetch(PDO::FETCH_NUM);
-    $mydatabase=null;
     ?>
-    <div class="cont container-fluid nopadding">
+    <div class="cont container-fluid nopadding" id="proj">
         <div class="Proj_title">
             <h1><?php echo $row[0];?></h1>
             <?php //<p><?php echo $row[1];</p>?>
@@ -370,7 +379,7 @@
 
 <!-- contact form ---------------------------------------------------->
 
-<div class="big_container_contact" >
+<div class="big_container_contact" id="contact" >
     <div class="container_contact">
       
       <div class="form">
@@ -422,16 +431,24 @@
           <form class="second_form" action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container_contact">
-              <input type="text" name="name" class="input" placeholder="Username" />
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
             </div>
             <div class="input-container_contact">
-              <input type="email" name="email" class="input" placeholder="Email"/>
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
             </div>
             <div class="input-container_contact">
-              <input type="tel" name="phone" class="input" placeholder="Phone"/>
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
             </div>
             <div class="input-container_contact textarea">
-              <textarea name="message" class="input" placeholder="Message"></textarea>
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
           </form>
@@ -439,14 +456,10 @@
       </div>
     </div>
     </div>
+<!---------------------------- end contact form ---------------------------------------------------->
 
-
-
-
-
-
-<!-- end contact form ---------------------------------------------------->
-    <div class="container_donation">
+<!------------------------------ Donate form ------------------------------------------------------->
+    <div class="container_donation" id="donate">
         <div class="container_donation_couche row">
             <div class="cont1 col-md-7 col-lg-7 col-xl-7">
                 <h1>Your Help Can<br>Change The<br>World</h1>
@@ -468,5 +481,9 @@
             </div>
         </div>
     </div>
+    <!------------------------------ end Donate form ------------------------------------------------------->
 </body>
+<?php
+$mydatabase=null;
+?>
 </html>

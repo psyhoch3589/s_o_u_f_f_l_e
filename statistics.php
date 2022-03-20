@@ -11,47 +11,16 @@
                 <div class="col-md-3 col-lg-3 col-xl-3"></div>
         </div><hr>
             <?php
-            function generate_items($name,$pourcentage,$status,$num){
-                if($status=1){
-                    if($num==1) {
-                        $delete="d1";
-                        $btn="t1";
-                    }
-                    if($num==2) {
-                        $delete="d2";
-                        $btn="t2";
-                    }
-                    if($num==3) {
-                        $delete="d3";
-                        $btn="t3";
-                    }
-                    if($num==4) {
-                        $delete="d4";
-                        $btn="t4";
-                    }
-                }else{
-                    if($num==1) {
-                        $delete="d1";
-                        $btn="m1";
-                    }
-                    if($num==2) {
-                        $delete="d2";
-                        $btn="m2";
-                    }
-                    if($num==3) {
-                        $delete="d3";
-                        $btn="m3";
-                    }
-                    if($num==4) {
-                        $delete="d4";
-                        $btn="m4";
-                    }
-                }
+            function generate_items($name,$pourcentage,$status,$num){//$delete est soit "add" ou "delete"
+                if($num==1) $delete="d1";
+                    if($num==2) $delete="d2";
+                    if($num==3) $delete="d3";
+                    if($num==4) $delete="d4";
                 echo "<div class='form_stati_item row'>
                     <div class='col-md-3 col-lg-3 col-xl-3'><h5>".$name."</h5></div><hr>
                     <div class='col-md-3 col-lg-3 col-xl-3'><h5>".$pourcentage."</h5></div><hr>";
-                    if($status==0) echo "<div class='col-md-3 col-lg-3 col-xl-3'><button type='submit' class='status-btn-disabled' name=".$btn.">disabled</button></div><hr>";
-                    else echo "<div class='col-md-3 col-lg-3 col-xl-3'><button type='submit' class='status-btn-enabled' name=".$btn.">enabled</button></div><hr>";
+                    if($status=="disabled") echo "<div class='col-md-3 col-lg-3 col-xl-3'><button type='submit' class='status-btn-disabled' name='status'>disabled</button></div><hr>";
+                    else echo "<div class='col-md-3 col-lg-3 col-xl-3'><button type='submit' class='status-btn-enabled' name='status'>enabled</button></div><hr>";
                     echo"<div class='col-md-3 col-lg-3 col-xl-3'><button type='submit' class='status-btn-delete' name=".$delete.">delete</button></div>
                 </div>";
             }
@@ -71,51 +40,18 @@
             catch(exception $e){
                 Die("ERROR".$e->getMessage());
             }
-            //delete a statistic
-            $sql=$mydatabase->prepare("delete from stati where id=?");
-            for($i=1;$i<=4;$i++)
-            {
-                $name="d".$i;
-                if(isset($_POST["$name"])){
-                    $sql->execute(array($i));
-                    break;
-                }
-            }
-            //modify the status of the statistics to enabled
-            $sql=$mydatabase->prepare("update stati set statu=0 where id=?");
-            for($i=1;$i<=4;$i++)
-            {
-                $btnn="t".$i;
-                if(isset($_POST["$btnn"])){
-                    $sql->execute(array($i));
-                    break;
-                }
-            }
-            //modify the status of the statistics to disabled
-            $sql=$mydatabase->prepare("update stati set statu=1 where id=?");
-            for($i=1;$i<=4;$i++)
-            {
-                $btnn="m".$i;
-                if(isset($_POST["$btnn"])){
-                    $sql->execute(array($i));
-                    break;
-                }
-            }
-
-
             $sql=$mydatabase->query("select * from stati");
             $list_exist=array();
             while($row=$sql->fetch(PDO::FETCH_NUM)){
-                generate_items($row[1],$row[2],$row[3],$row[0]);//it generate all statistics that we have in the Database
+                if($row[3]==0) $status="disabled";
+                else $status="enabled";
+                generate_items($row[1],$row[2],$status,$row[0]);
                 array_push($list_exist,$row[0]);
             }
-            //those line of codes are to find the next id that i can give to the next input of the administrator
             if(!in_array(1,$list_exist)) $j=1;
-            else if(!in_array(2,$list_exist)) $j=2;
-            else if(!in_array(3,$list_exist)) $j=3;
-            else if(!in_array(4,$list_exist)) $j=4;
-
-            //add a statistic
+                else if(!in_array(2,$list_exist)) $j=2;
+                else if(!in_array(3,$list_exist)) $j=3;
+                else if(!in_array(4,$list_exist)) $j=4;
             if(isset($_POST["add"])){
                 add_item();
             }
@@ -138,13 +74,8 @@
         <div class="col-md-2 col-lg-2 col-xl-2"></div>
         <div class="ttt col-md-8 col-lg-8 col-xl-8">
             <button type="submit" name="add" class="add_btn">add</button>
-            <button type="submit"  name="submit_changes" class="btn_submit_about">Save changes</button>
+            <button type="submit"  name="submit" class="btn_submit_about">Save changes</button>
         </div>
-        <?php
-        if(isset($_POST["submit_changes"])){
-            echo "<script>alert('your changes has been saved successfully');</script>";
-        }
-        ?>
         <div class="col-md-2 col-lg-2 col-xl-2"></div>
     </div>
 </form>

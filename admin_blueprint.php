@@ -23,19 +23,13 @@ session_start();
     
 </head>
 <body>
-    <div class="row nopadding tttest">
-        <div class="bar_option col-md-3 col-lg-3 col-xl-3 nopadding">
-            <form  action="" method="POST">
+    <div class="row nopadding">
+        <div class="bar_option col-md-2 col-lg-2 col-xl-2 nopadding">
+            <form class="couche" action="" method="POST">
                 <div class="bar_option_couche">
                     <a href="home_client.php" style="text-decoration:none">
                         <h1>Souffle<span class="test">.</span></h1>
                     </a>
-                </div>
-                <div class="input-group bar_notif_admin ">
-                    <div class="search_div">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <button type="submit" class="search-btn"><img src="outline_search_black_24dp.png" class="image_test"></button>
-                    </div>
                 </div>
                 <div class="bar_option_couche_sections">
                     <button class="btn_option" type="submit" name="home"  id="home">Home</button>
@@ -50,29 +44,35 @@ session_start();
                     <button class="btn_option" type="submit" name="projects">Projects</button>
                 </div>
                 <div class="bar_option_couche_sections">
-                    <button class="btn_option" type="submit" name="Messages" id="chat">Messages</button>
+                    <button class="btn_option" type="submit" name="Messages">Messages</button>
                 </div>
-                <button class="btn_option_logout" type="submit" name="LogOut" >LogOut</button>
             </form>
         </div>
-        <div class="sec_admin col-md-9 col-lg-9 col-xl-9">
-            
+        <div class="sec_admin col-md-10 col-lg-10 col-xl-10 nopadding">
+            <div class="row nopadding">
+                <div class="input-group bar_notif_admin col-md-4 col-lg-4 col-xl-4">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary">search</button>
+                </div>
+                <div class=" bar_notif_admin col-md-8 col-lg-8 col-xl-8 bar_notif_admin2">
+                    <button type="submit">LogOut</button>
+                </div>
+            </div>
             <?php
-            // $namee="d".$_SESSION["contact"];
-            $namee="";
+            $namee="d".$_SESSION["contact"];
             if(isset($_POST['home'])) 
             {
                 $_SESSION["option"]=0;
                 include "Home_admin.php";
                 echo "<script>document.getElementById('home').classList.add('visited');</script>";
             }
-            else if(isset($_POST['about']) || isset($_POST["submit_about"])) 
+            else if(isset($_POST['about']) || isset($_POST["submit"])) 
             {
                 $_SESSION["option"]=1;
                 include "About_admin.php";
                 echo "<script>document.getElementById('about').classList.add('visited');</script>";
             }
-            else if(isset($_POST['statistics']) || isset($_POST["add"]) || isset($_POST["add_item"]) || isset($_POST["d1"]) || isset($_POST["d2"]) || isset($_POST["d3"]) || isset($_POST["d4"])) 
+            else if(isset($_POST['statistics']) || isset($_POST["add"]) || isset($_POST["add_item"])) 
             {
                 $_SESSION["option"]=2;
                 include "statistics.php";
