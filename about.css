@@ -8,13 +8,14 @@
 .section{
     width: 100%;
     min-height: 100vh;
+	padding-top: 40px;
     /* display: block;
     overflow: auto; */
     
 
-    top: 850px;
+    /* top: 850px;
     z-index: -1;
-    padding-top: 0px;
+    padding-top: 0px; */
 }
 /*--------------------------------------------------------------------------------------------*/
 
