@@ -14,6 +14,9 @@ try {
     if(isset($_POST["submition"])){
                 
 // prepare sql and bind parameters
+
+        $sttm = $conn->prepare("DELETE FROM home");
+        $sttm->execute();
         
 
 
@@ -21,24 +24,13 @@ try {
         $user_description= $_POST["user_description"];
 
         $stmt = $conn->prepare("INSERT INTO home
-        VALUES (:ID, :user_title, :user_descriptionN , :IMAGE_NAME)");
+        VALUES (:user_title, :user_descriptionN , :IMAGE_NAME)");
 
-        $stmt->bindParam(':ID', $ID_number);
+
         $stmt->bindParam(':user_title', $user_title);
         $stmt->bindParam(':user_descriptionN', $user_description);
         $stmt->bindParam(':IMAGE_NAME', $picSlide);
 
-        // id generation
-        $rows = $conn->prepare("Select max(ID) from home");
-        $rows->execute();
-        $count = $rows->fetch();
-
-
-
-        $rows = $conn->prepare("SELECT MAX(ID) AS max_id FROM home");
-        $rows -> execute();
-        $count = $rows -> fetch(PDO::FETCH_ASSOC);
-        $max_id = $count['max_id'];
 
         // image upload
 
@@ -53,7 +45,7 @@ try {
           
          move_uploaded_file($tmp_dir, $upload_dir.$picSlide);
 
-        $ID_number = $max_id+1;
+   
         $stmt->execute();
 
         
