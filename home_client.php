@@ -118,8 +118,8 @@
     <div class="home_image container-fluid nopadding" id="home">
         <div class="testo">
             <div class="testooo">
-                <h1 id="tt"><?php echo $row[0]; ?></h1><hr style="background-color:#F75E61;width:90%">
-                <p><?php echo $row[1]; ?></p>
+                <h1 id="tt"><?php echo $row[1]; ?></h1><hr style="background-color:#F75E61;width:90%">
+                <p><?php echo $row[2]; ?></p>
                 <button class="donate-btn">Donate now</button>
                 <button class="raise-btn">Raise Refund</button>
             </div>
@@ -131,14 +131,17 @@
     <?php
     echo "<style>
     .home_test_mobile{
-    background-image: url(".$row[2].");
+    background-image: url('uploads_admin\'".$row[3].");
     }
+    
+
+    
     </style>"
     ?>
     <div class="home_testo row px-0 nopadding">
         <div class="home_test_mobile col-12 col-sm-12 col-xs-12 nopadding">
             <div class="testoo">
-                <h1><?php echo $row[0]; ?></h1>
+                <h1><?php echo $row[1]; ?></h1>
             </div>
         </div>
     </div>

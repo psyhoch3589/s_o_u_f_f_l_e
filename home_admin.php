@@ -17,36 +17,36 @@ try {
         
 
 
-        $SLIDE_TITLE= $_POST["SLIDE_TITLE"];
-        $DESCRIPTION= $_POST["DESCRIPTION"];
+        $user_title= $_POST["user_title"];
+        $user_description= $_POST["user_description"];
 
-        $stmt = $conn->prepare("INSERT INTO about
-        VALUES (:ID, :SLIDE_TITLE, :DESCRIPTIONN , :IMAGE_NAME)");
+        $stmt = $conn->prepare("INSERT INTO home
+        VALUES (:ID, :user_title, :user_descriptionN , :IMAGE_NAME)");
 
         $stmt->bindParam(':ID', $ID_number);
-        $stmt->bindParam(':SLIDE_TITLE', $SLIDE_TITLE);
-        $stmt->bindParam(':DESCRIPTIONN', $DESCRIPTION);
+        $stmt->bindParam(':user_title', $user_title);
+        $stmt->bindParam(':user_descriptionN', $user_description);
         $stmt->bindParam(':IMAGE_NAME', $picSlide);
 
         // id generation
-        $rows = $conn->prepare("Select max(ID) from annonce");
+        $rows = $conn->prepare("Select max(ID) from home");
         $rows->execute();
         $count = $rows->fetch();
 
 
 
-        $rows = $conn->prepare("SELECT MAX(ID) AS max_id FROM annonce");
+        $rows = $conn->prepare("SELECT MAX(ID) AS max_id FROM home");
         $rows -> execute();
         $count = $rows -> fetch(PDO::FETCH_ASSOC);
         $max_id = $count['max_id'];
 
         // image upload
 
-        $picSlide=$_FILES['slide_image']['name'];
+        $picSlide=$_FILES['slide_image']['name']; 
         $tmp_dir=$_FILES['slide_image']['tmp_name'];
         $imageSize=$_FILES['slide_image']['size'];
 
-        $upload_dir='ressources/';
+        $upload_dir='uploads_admin/';
         // $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
         $valid_extensions=array('jpeg','jpg','png','gif','pdf');
         // $picSlide=$images.".".$imgExt;
@@ -60,7 +60,7 @@ try {
 
 
 
-    // $conn->exec("INSERT INTO annonce VALUES (1,$SLIDE_TITLE,$DESCRIPTION,'test')"); 
+    // $conn->exec("INSERT INTO home VALUES (1,$user_title,$user_description,'test')"); 
 // echo "New record created successfully";
     // }
 
@@ -83,11 +83,11 @@ $conn = null;
     <div class="formm row">
         <div class="form-step col-xl-6 col-lg-6 col-md-6">
             <div class="input-group">
-                <label for="SLIDE_TITLE">Slide title</label>
+                <label for="user_title">Slide title</label>
                 <input  type="text" name="user_title" id="user_title" >
             </div>
             <div class="input-group" style="padding-bottom: 60px;">
-                <label for="DESCRIPTION">Description</label>
+                <label for="user_description">user_description</label>
                 <input  type="text" name="user_description" id="user_description" >
             </div>
         </div>
@@ -107,7 +107,7 @@ $conn = null;
         <!-- <a href="#" class="btn btn-next">Next</a> -->
         <div class="col-md-8 col-lg-8 col-xl-8"></div>
         <div class="col-md-4 col-lg-4 col-xl-4">
-            <button type="submit"  name="" class="btn-submit">Save changes</button>
+            <button type="submit"  name="submition" class="btn-submit">Save changes</button>
         </div> 
     </div>
 </form>
