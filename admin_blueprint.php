@@ -47,7 +47,7 @@ session_start();
                     <button class="btn_option" type="submit" name="statistics" id="statistics">Statistics</button>
                 </div>
                 <div class="bar_option_couche_sections">
-                    <button class="btn_option" type="submit" name="projects">Projects</button>
+                    <button class="btn_option" type="submit" name="projects" id="projects">Projects</button>
                 </div>
                 <div class="bar_option_couche_sections">
                     <button class="btn_option" type="submit" name="Messages" id="chat">Messages</button>
@@ -77,6 +77,12 @@ session_start();
                 $_SESSION["option"]=2;
                 include "statistics.php";
                 echo "<script>document.getElementById('statistics').classList.add('visited');</script>";
+            }
+            else if(isset($_POST['projects']) || isset($_POST["respond"]) || isset($_POST[$namee]))
+            {
+                $_SESSION["option"]=3;
+                include "project_admin.php";
+                echo "<script>document.getElementById('projects').classList.add('visited');</script>";
             }
             else if(isset($_POST['Messages']) || isset($_POST["respond"]) || isset($_POST[$namee]))
             {
