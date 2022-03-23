@@ -3,10 +3,10 @@
         <h1>About</h1>
         <h5>Display</h5>
         <div class="ty">
-            <input type="radio" id="dewey" name="drone" value="dewey" style="padding:0 !important">
-            <label for="dewey">Dewey</label>
-            <input type="radio" id="louie" name="drone" value="louie">
-            <label for="louie">Louie</label>
+            <input type="radio" id="diplay_yes" name="display" value="YES" style="padding:0 !important">
+            <label for="diplay_yes">YES</label>
+            <input type="radio" id="diplay_no" name="display" value="NO">
+            <label for="diplay_no">NO</label>
         </div>
         <div class="form_step_text ">
             <div class="input_group_about tesst">
@@ -41,14 +41,12 @@
     
     <?php
     if(isset($_POST["submit_about"])){
-        try
-        {
-            $mydatabase = new PDO("mysql:host=localhost;dbname=souffle","root","");
+        try{
+            $mydatabase=new PDO("mysql:host=localhost;dbname=souffle","root","");
         }
         catch(exception $e){
             Die("ERROR".$e->getMessage());
         }
-
         $picSlide=$_FILES['slide_image']['name'];
         $tmp_dir=$_FILES['slide_image']['tmp_name'];
         $upload_dir="uploads_admin/";
@@ -58,8 +56,13 @@
         $d1=$_POST["user_description"];
         $t2=$_POST["user_titlee"];
         $d2=$_POST["user_descriptionn"];
-        $sql=$mydatabase->prepare("insert into about value(?,?,?,?,?)");
-        $sql->execute(array($t1,$d1,$t2,$d2,$upload_dir.$picSlide));
+        if($_POST["display"]==="NO") $status="no";
+        else $status="yes";
+        $sql=$mydatabase->prepare("insert into about value(?,?,?,?,?,?)");
+        $sql2="delete from about";
+        $mydatabase->exec($sql2);
+        $sql->execute(array($t1,$d1,$t2,$d2,$upload_dir.$picSlide,$status));
+        echo $status;
         echo "<script>document.getElementById('about').classList.add('visited');</script>";
     }
     ?>
