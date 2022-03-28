@@ -68,7 +68,7 @@ if(isset($_POST["submit_cards"])){
     if($d3!="") $mydatabase->exec("update cards set desc3=\"".$d3."\"");
     if($_POST["display"]==="NO") $status="no";
     else $status="yes";
-    $mydatabase->exec("update cards set status=\"".$status."\"");
+    $mydatabase->exec("update cards set statu=\"".$status."\"");
     }
 $mydatabase=null;
 ?>
