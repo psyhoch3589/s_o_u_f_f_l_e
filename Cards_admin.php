@@ -3,9 +3,9 @@
         <h1>Cards</h1>
         <h5>Display</h5>
         <div class="tyy">
-            <input type="radio" id="diplay_yes" name="display" value="YES" style="padding:0 !important">
+            <input type="radio" id="diplay_yes" name="display_cards" value="YES" style="padding:0 !important">
             <label for="diplay_yes">YES</label>
-            <input type="radio" id="diplay_no" name="display" value="NO">
+            <input type="radio" id="diplay_no" name="display_cards" value="NO">
             <label for="diplay_no">NO</label>
         </div>
         <div class="row">
@@ -66,7 +66,11 @@ if(isset($_POST["submit_cards"])){
     if($d2!="") $mydatabase->exec("update cards set desc2=\"".$d2."\"");
     if($t3!="") $mydatabase->exec("update cards set titre3=\"".$t3."\"");
     if($d3!="") $mydatabase->exec("update cards set desc3=\"".$d3."\"");
-    if($_POST["display"]==="NO") $status="no";
+    if(isset($_POST["display_cards"]))
+    {
+        if($_POST["display_cards"]==="NO") $status="no";
+        else $status="yes";
+    }
     else $status="yes";
     $mydatabase->exec("update cards set statu=\"".$status."\"");
     }
