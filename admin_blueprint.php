@@ -18,6 +18,7 @@ session_start();
   <link rel="stylesheet" href="About_admin.css">
   <link rel="stylesheet" href="stati.css">
   <link rel="stylesheet" href="chat.css">
+  <link rel="stylesheet" href="Cards_admin.css">
     
     
     
@@ -39,6 +40,9 @@ session_start();
                 </div>
                 <div class="bar_option_couche_sections">
                     <button class="btn_option" type="submit" name="home"  id="home">Home</button>
+                </div>
+                <div class="bar_option_couche_sections">
+                    <button class="btn_option" type="submit" name="cards"  id="Cards">Cards</button>
                 </div>
                 <div class="bar_option_couche_sections">
                     <button class="btn_option" type="submit" name="about" id="about">About</button>
@@ -66,46 +70,58 @@ session_start();
                 include "Home_admin.php";
                 echo "<script>document.getElementById('home').classList.add('visited');</script>";
             }
-            else if(isset($_POST['about']) || isset($_POST["submit_about"])) 
+            else if(isset($_POST['cards'])) 
             {
                 $_SESSION["option"]=1;
+                include "Cards_admin.php";
+                echo "<script>document.getElementById('Cards').classList.add('visited');</script>";
+            }
+            else if(isset($_POST['about']) || isset($_POST["submit_about"])) 
+            {
+                $_SESSION["option"]=2;
                 include "About_admin.php";
                 echo "<script>document.getElementById('about').classList.add('visited');</script>";
             }
             else if(isset($_POST['statistics']) || isset($_POST["add"]) || isset($_POST["add_item"]) || isset($_POST["d1"]) || isset($_POST["d2"]) || isset($_POST["d3"]) || isset($_POST["d4"])) 
             {
-                $_SESSION["option"]=2;
+                $_SESSION["option"]=3;
                 include "statistics.php";
                 echo "<script>document.getElementById('statistics').classList.add('visited');</script>";
             }
             else if(isset($_POST['projects']) || isset($_POST["respond"]) || isset($_POST[$namee]))
             {
-                $_SESSION["option"]=3;
+                $_SESSION["option"]=4;
                 include "project_admin.php";
                 echo "<script>document.getElementById('projects').classList.add('visited');</script>";
             }
             else if(isset($_POST['Messages']) || isset($_POST["respond"]) || isset($_POST[$namee]))
             {
-                $_SESSION["option"]=4;
+                $_SESSION["option"]=5;
                 include "chat.php";
                 echo "<script>document.getElementById('chat').classList.add('visited');</script>";
             }
             else{
                     if($_SESSION["option"]==0) 
                     {
-                        $_SESSION["option"]=0;
+                        // $_SESSION["option"]=0;
                         include "Home_admin.php";
                         echo "<script>document.getElementById('home').classList.add('visited');</script>";
                     }
                     else if($_SESSION["option"]==1) 
                     {
-                        $_SESSION["option"]=1;
-                        include "About_admin.php";
-                        echo "<script>document.getElementById('about').classList.add('visited');</script>";
+                        // $_SESSION["option"]=1;
+                        include "Cards_admin.php";
+                        echo "<script>document.getElementById('Cards').classList.add('visited');</script>";
                     }
                     else if($_SESSION["option"]==2) 
                     {
                         $_SESSION["option"]=2;
+                        include "About_admin.php";
+                        echo "<script>document.getElementById('about').classList.add('visited');</script>";
+                    }
+                    else if($_SESSION["option"]==3) 
+                    {
+                        $_SESSION["option"]=3;
                         include "statistics.php";
                         echo "<script>document.getElementById('statistics').classList.add('visited');</script>";
                     }
@@ -117,8 +133,8 @@ session_start();
                     }
                     else 
                     {   
-                    $_SESSION["option"]=0;
-                        include "Home_admin.php";
+                    $_SESSION["option"]==5;
+                        include "chat.php";
                         echo "<script>document.getElementById('home').classList.add('visited');</script>";
                     }
             }
